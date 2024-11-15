@@ -1,0 +1,32 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.item_ensayo {
+    @include m.tablet {
+        @include m.grid(2, 5rem)
+    }
+    img {
+        align-items: center;
+        border-radius: 1rem;
+    }  
+}
+
+.item_ensayo_texto {
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 3px solid v.$verde; 
+        padding-bottom: 0.5rem; 
+    }
+    h3 {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    ul {
+        list-style-type: none; 
+        padding-left: 0;
+        margin: 0;
+        padding-left: 5rem;
+        line-height: 5rem;
+    }
+}

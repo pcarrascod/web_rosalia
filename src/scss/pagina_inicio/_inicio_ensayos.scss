@@ -1,0 +1,15 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.ensayos {
+    @include m.telefono{ 
+        @include m.grid(2, 2rem);
+    }
+    @include m.tablet{ 
+        @include m.grid(5, 2rem);
+    }
+
+    .elemento_ensayo:hover {
+        transform: scale(1.1);
+    }
+}

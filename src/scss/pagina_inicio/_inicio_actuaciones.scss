@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.actuaciones {
+    h2 {
+        text-align: center;
+    }
+}
+
+.carousel {
+    width: 100%;                        /* Ocupa todo el ancho del contenedor */
+    overflow: hidden;                   /* Oculta el contenido que sale del contenedor */
+    display: flex;                      /* Flex para alinear en fila */
+    justify-content: center;            /* Centrar el carrusel */
+    position: relative;
+}
+  
+ 
+.carousel-track {
+    display: flex;                      /* Coloca los elementos en una fila */
+    animation: slide 90s linear infinite; /* Animación de desplazamiento de 20s */
+}
+
+/* Estilo para cada elemento del carrusel */
+.carousel-item {
+    min-width: 25%;                   /* Cada imagen ocupa 25% del ancho total */
+    box-sizing: border-box;             /* Asegura que el padding y borde se incluyan en el ancho */
+}
+
+.carousel-item img {
+    width: 100%;                        /* La imagen ocupa el 100% del ancho de su contenedor */
+    height: auto;                       /* Mantiene las proporciones de la imagen */
+}
+
+/* Definición de la animación */
+@keyframes slide {
+    0% {
+        transform: translateX(0);         /* Comienza en la posición inicial */
+    }
+    100% {
+        transform: translateX(-100%);     /* Se desplaza completamente hacia la izquierda (fuera de la pantalla) */
+    }
+}

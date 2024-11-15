@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+    background-color: v.$verde;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+    }
+    .izquierda {
+        display: flex;
+        justify-content: left;
+        margin-left: 2rem;
+        a {
+            font-size: 1.5rem;
+            color: v.$blanco;
+            margin-left: 1rem;
+        }
+    }
+    .derecha {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin-right: 2rem;
+        p {
+            font-size: 1.5rem;
+            color: v.$blanco;
+            margin-left: 1rem;
+        }
+    }
+    
+}
+
